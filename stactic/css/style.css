@@ -1,39 +1,35 @@
+/* ----- Generales ---- */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Courgette', 'Arial Narrow', Arial, sans-serif;
 }
-.mySlides {
-    display:none;
+/* ----- Variables ---- */
+:root {
+    --black: #000000;
 }
-@media (max-width: 768px) {
-    .carousel-inner .carousel-item > div {
-        display: none;
+/* ----- Skip to navigation ---- */
+.skip-color {
+    color: var(--black);
+    font-weight: bold;
+}
+/* ----- Navbar/Menu ---- */
+#nav-link-hover:hover {
+    animation: 3s underline;
+    color: var(--black);
+    font-weight: bold;
+    box-shadow: 4px 4px 0 3px;
+    border-radius: 10px;
+}
+@keyframes underline {
+    from {
+        border-bottom: 1px solid;
     }
-    .carousel-inner .carousel-item > div:first-child {
-        display: block;
+    to {
+        border-top: 1px solid;
     }
-}
-
-.carousel-inner .carousel-item.active,.carousel-inner .carousel-item-next,.carousel-inner .carousel-item-prev {
-    display: flex;
-}
-
-/* display 3 */
-@media (min-width: 768px) {
     
-    .carousel-inner .carousel-item-right.active,.carousel-inner .carousel-item-next {
-      transform: translateX(33.333%);
-    }
-    
-    .carousel-inner .carousel-item-left.active,.carousel-inner .carousel-item-prev {
-      transform: translateX(-33.333%);
-    }
-}
-
-.carousel-inner .carousel-item-right,.carousel-inner .carousel-item-left{ 
-  transform: translateX(0);
 }

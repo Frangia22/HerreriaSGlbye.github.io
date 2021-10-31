@@ -11,36 +11,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="container-fluid">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-        <h2 class="navbar-brand h-50 d-inline-block"><img src="./stactic/img/soldador.png"> HerreriaSG</h2>
-        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
+    <header class="skip-to-navigation">
+      <a class="visually-hidden-focusable skip-color" href="#nav">Skip to navigation</a>
+      <a class="visually-hidden-focusable skip-color" href="#content">Skip to content</a>
+      <a class="visually-hidden-focusable skip-color" href="#content">Skip to footer</a>
+    </header>
+    <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-white">
+      <div class="container-fluid">
+        <a class="navbar-brand mx-3 fs-2 fst-italic" href="#"><img class="mx-3" src="/stactic/img/soldador.png" alt="Brand">Herrería SG</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div id="my-nav" class="collapse navbar-collapse" role="menu">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Inicio</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fs-5">
+            <li class="nav-item mx-5">
+              <a class="nav-link" id="nav-link-hover" aria-current="page" href="#">Inicio</a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link"
-                href="https://www.facebook.com/oscarsergiogabriel.giachero" tabindex="-1"aria-disabled="true">Facebook</a>
+            <li class="nav-item mx-5">
+              <a class="nav-link" id="nav-link-hover" href="#">Nosotros</a>
+            </li>
+            <li class="nav-item mx-5">
+              <a class="nav-link" id="nav-link-hover" href="#">Servicios</a>
             </li>
           </ul>
         </div>
-      </nav>
-    </div>
-    <div class="card bg-dark text-white mt-5" >
-      <img src="./stactic/img/Cartel_SG_1.jpeg" class="card-img" alt="..." style="height: 350px;">
-      <div class="card-img-overlay d-flex ">
-        <div class="alert alert-primary alert-dismissible fade show m-auto" role="alert">
-          Bienvenidos a<strong> Herreria SG.</strong>
-          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
       </div>
-    </div>
+    </nav>
+    <main id="content">
+      <div class="card border-0">
+        <img src="/stactic/icons/portadaWeb.svg" alt="Cover HerreríaSG">        
+      </div>
+    </main>
     <div class="card mb-4 bg-primary">
       <div class="card-header text-white bg-primary">
         <h5>¿Quienes somos?</h5>
