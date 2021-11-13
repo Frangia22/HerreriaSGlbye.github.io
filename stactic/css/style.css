@@ -17,6 +17,9 @@ body{
     font-weight: bold;
 }
 /* ----- Navbar/Menu ---- */
+.bg-opal {
+    background-color: #DBEDFA !important;
+}
 #nav-link-hover:hover {
     animation: 3s underline;
     color: var(--black);
