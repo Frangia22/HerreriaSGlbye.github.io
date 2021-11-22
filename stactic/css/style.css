@@ -27,6 +27,88 @@ body{
     box-shadow: 4px 4px 0 3px;
     border-radius: 10px;
 }
+/* ----- About us ----- */
+.fig-one {
+	background: linear-gradient(180deg, transparent 30%, 20%, #75aee0 10%, 45%, transparent 40%, 50%, #f6b606 50%, 55%, transparent 55%, 60%, #75aee0 50%, 65%, transparent 65%, transparent 90%);
+	height: 25vh;
+	position: absolute;
+	top: 90%;
+	width: 100%;
+}
+.fig-two {
+	background: linear-gradient(5deg, transparent 30%, 20%, #75aee0 10%, 45%, transparent 40%, 50%, #f6b606 50%, 55%, transparent 55%, 60%, #75aee0 50%, 65%, transparent 65%, transparent 90%);
+	height: 25vh;
+	width: 50%;
+}
+.fig-two:nth-of-type(2) {
+	background: linear-gradient(-5deg, transparent 30%, 20%, #75aee0 10%, 45%, transparent 40%, 50%, #f6b606 50%, 55%, transparent 55%, 60%, #75aee0 50%, 65%, transparent 65%, transparent 90%);
+	height: 25vh;
+	width: 50%;
+    float: right;
+}
+.clip-bg {
+    clip-path: polygon(4% 0%, 0% 6%, 2% 92%, 6% 100%, 94% 100%, 98% 98%, 100% 4%, 96% 0%);
+}
+.img-about {
+    width: 14em;
+    height: 10em;
+}
+.about-img-2 .img-about {
+    box-shadow: .7em 1em .5em -.1em rgba(0,0,0,0.40);
+    height: 13em;
+}
+.about-img-1 .img-about {
+    box-shadow: -.5em 1em .5em -.1em rgba(0,0,0,0.40);
+}.about-img-3 .img-about {
+    box-shadow: -.7em -1em .5em -.1em rgba(0,0,0,0.40);
+}
+.about-img-1 {
+    bottom: 0%;
+    left: 20%;
+}
+.about-img-2 {
+    top: 15%;
+    left: 45%;
+}
+.about-img-3 {
+    top: 2%;
+    left: 15%;
+}
+/* ----- Our Service ----- */
+.clip-bg-service {
+    clip-path: polygon(100% 0%, 4% 0%, 0% 13%, 0% 100%, 96% 100%, 100% 88%);
+}
+.img-service {
+    width: 64px;
+}
+/* ----- Our Projects ----- */
+.img-project {
+    width: 100%;
+}
+.card .project-cont {
+    position: relative;
+    padding: 5px 10px;
+    text-align: justify;
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.card:hover .project-cont {
+    width: 100%;
+    height: 100%;
+    background:rgba(255,193,0, 0.8);
+    color: var(--black);
+    display: block;
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+    margin: 0 0 10px 0;
+    transition-delay: 0.3s
+}
+.h-304 {
+    height: 304px;
+}
 @keyframes underline {
     from {
         border-bottom: 1px solid;
