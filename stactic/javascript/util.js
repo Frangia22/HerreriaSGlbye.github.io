@@ -12,3 +12,16 @@ document.addEventListener("DOMContentLoaded", function(){
   } 
 });
 }); 
+btnTop = document.querySelector('#btnToTop');
+window.onscroll = () => {scrollTop()};
+const scrollTop = () => {
+  if (window.scrollY > 90) {
+    btnTop.style.display = 'block';
+  }else {
+    btnTop.style.display = 'none';
+  }
+}
+// When click about button, scroll to the top the document
+function scrollToTop() {
+  window.scrollTo(0,0);
+}
