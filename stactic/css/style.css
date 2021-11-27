@@ -32,7 +32,7 @@ body{
 	background: linear-gradient(180deg, transparent 30%, 20%, #75aee0 10%, 45%, transparent 40%, 50%, #f6b606 50%, 55%, transparent 55%, 60%, #75aee0 50%, 65%, transparent 65%, transparent 90%);
 	height: 25vh;
 	position: absolute;
-	top: 90%;
+	top: 60%;
 	width: 100%;
 }
 .fig-two {
@@ -48,6 +48,12 @@ body{
 }
 .clip-bg {
     clip-path: polygon(4% 0%, 0% 6%, 2% 92%, 6% 100%, 94% 100%, 98% 98%, 100% 4%, 96% 0%);
+}
+.position-change {
+    position: relative;
+}
+.position-change-img {
+    position: absolute;
 }
 .img-about {
     width: 14em;
@@ -82,6 +88,12 @@ body{
     width: 64px;
 }
 /* ----- Our Projects ----- */
+#bg-indicators {
+    background-color: var(--black);
+}
+.top-indicators {
+    top: 100%;
+}
 .img-project {
     width: 100%;
 }
@@ -109,12 +121,127 @@ body{
 .h-304 {
     height: 304px;
 }
+/* ----- Contact ----- */
+.item-hover:hover {
+    font-size: 1.2em;
+    font-weight: bold;
+    font-style: italic;
+}
+.item-link {
+    filter: opacity(0.4) drop-shadow(1px 6px 4px);
+}
+.item-link:hover {
+    filter: opacity(1);
+}
+.img-social {
+    transition: all .6s cubic-bezier(.19,1,.22,1);
+}
+.img-social:hover {
+    transform: translate(25px, -10px);
+}
+.position-btn {
+    bottom: 20px;
+    right: 40px;
+    background-color: transparent;
+    border: 0;
+    font-size: 4em;
+}
+#btnToTop {
+    display: none;
+}
 @keyframes underline {
     from {
         border-bottom: 1px solid;
     }
     to {
         border-top: 1px solid;
+    }
+    
+}
+@media (max-width: 1023px) {
+    .w-map {
+        width: 200px;
+    }
+    .h-304 {
+        height: 156px;
+    }
+}
+@media (max-width: 900px) and (min-width: 767px) {
+    .fig-one {
+        position: absolute;
+        top: 110vh;
+    }
+
+}
+@media (max-width: 767px) {
+    .position-change {
+        position: inherit;
+    }
+    .position-change-img {
+        position: relative;
+    }
+    .img-about {
+        width: 10em;
+    } 
+    .about-img-1 {
+        bottom: -15%;
+        left: 0%;
+        margin: 0 0 0 15%;
+    }
+    .about-img-2 {
+        top: 5%;
+        left: 0%;
+        margin: 0 0 0 45%;
+    }
+    .about-img-3 {
+        top: -2%;
+        left: 0%;
+        margin: 0 0 0 25%;
+    }
+
+}
+@media (max-width: 420px) {
+    /*----- About us ------*/
+    .position-change {
+        position: static;
+    }  
+    .position-change-img {
+        position: relative;
+    }  
+    .img-about {
+        width: 10em;
+        height: 7em;
+    }
+    .about-img-2 .img-about {
+        box-shadow: .7em 1em .5em -.1em rgba(0,0,0,0.40);
+        height: 6em;
+    }
+    .about-img-1 .img-about {
+        box-shadow: -.5em 1em .5em -.1em rgba(0,0,0,0.40);
+    }.about-img-3 .img-about {
+        box-shadow: -.7em -1em .5em -.1em rgba(0,0,0,0.40);
+    }
+    .about-img-1 {
+        bottom: -15%;
+        left: 0%;
+        margin: 0 0 0 15%;
+    }
+    .about-img-2 {
+        top: 5%;
+        left: 0%;
+        margin: 0 0 0 45%;
+    }
+    .about-img-3 {
+        top: -2%;
+        left: 0%;
+        margin: 0 0 0 25%;
+    }
+    .position-btn {
+        bottom: 20px;
+        right: 40px;
+        background-color: transparent;
+        border: 0;
+        font-size: 3em;
     }
     
 }
