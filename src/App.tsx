@@ -3,6 +3,9 @@ import "./style.css"
 import { Navbar } from "./components/navbar";
 import { Hero } from "./components/hero";
 import { AboutUs } from "./components/about-us";
+import { OurServices } from "./components/our_services";
+import { Contact } from "./components/contact";
+import { Footer } from "./components/footer";
 
 
 export default function App() {
@@ -11,6 +14,9 @@ export default function App() {
         <Navbar />
         <Hero />
         <AboutUs />
+        <OurServices />
+        <Contact />
+        <Footer />
     </main>
   );
 }
