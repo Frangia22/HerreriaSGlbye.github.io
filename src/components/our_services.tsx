@@ -48,7 +48,7 @@ export function OurServices() {
                 <h4 className="font-josefin text-[18px] text-[#1D1D1D] font-semibold">
                   {item.title}
                 </h4>
-                <p className="font-josefin font-medium text-[14px] text-[#1D1D1DD9] w-[calc(100%-40px)] lg:w-[180px] mx-auto">
+                <p className="font-josefin font-medium text-[14px] text-[#1D1D1DD9] w-[calc(100%-40px)] md:w-[180px] mx-auto">
                   {item.description}
                 </p>
               </div>

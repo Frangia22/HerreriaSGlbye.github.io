@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 import HeroImage from '../assets/flyer/hero_image.png'
 export function Hero() {
     return (
-        <div className='bg-linear-[-108deg] from-[#0f203b] to-45% to-[#1c396d]'>
+        <div className='bg-linear-[-108deg] from-[#0f203b] to-45% to-[#1c396d] pt-[80px] md:pt-[60px]'>
             <section className="flex flex-col md:flex-row items-center justify-center gap-[40px] lg:gap-[80px] xl:gap-[140px] md:h-[420px] py-[50px] md:py-0">
                 <div className='flex flex-col items-start justify-center gap-[20px] max-w-xs lg:max-w-md xl:max-w-lg'>
                     <h1 className='text-start font-onest font-semibold text-[32px] lg:text-[40px] text-[#F6F5F3]'>👨‍🏭 Forjando Calidad, Creando Durabilidad</h1>
