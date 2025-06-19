@@ -21,4 +21,7 @@ p {
 @theme {
 	--font-josefin: 'Josefin Sans', sans-serif;
 	--font-onest: 'Onest', sans-serif;
+	--color-white: #EEEEEE;
+	--color-black: #161616;
 }
+
