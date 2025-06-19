@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 import { BurgerMenuIcon, CloseIcon, HerreriaIcon } from "../assets/icons/icons";
+import { handleSection, handleToTop } from "../utils/handleSection";
 
 function NavItem({
   children,
@@ -11,12 +12,14 @@ function NavItem({
   to: string;
   isScrolled: boolean;
 }) {
+  
   return (
     <li>
-      <Link
-        className={`font-josefin font-medium text-base relative group ${
-          isScrolled ? "text-black" : "lg:text-white"
-        }`}
+      <NavLink
+        onClick={() => handleSection(to)}
+        className={({ isActive }) => `font-josefin font-medium text-base relative group ${
+          isScrolled ? "text-[#1D1D1D]/95 hover:text-[#161616]" : "lg:text-white"
+        } ${isActive ? "text-black underline decoration-[2px] underline-offset-[6px]" : ""}`}
         to={to}
       >
         {children}
@@ -25,7 +28,7 @@ function NavItem({
             isScrolled ? "bg-black" : "bg-black md:bg-white"
           }`}
         ></span>
-      </Link>
+      </NavLink>
     </li>
   );
 }
@@ -44,14 +47,16 @@ export function Navbar() {
   return (
     <nav
       className={`fixed inset-x-0 top-[15px] lg:top-0 z-30 mx-auto w-[calc(100vw-20px)] lg:w-full ${
-        isMenuOpen ? "rounded-t-[10px]" : "rounded-[10px] lg:rounded-none lg:rounded-b-[10px]"
+        isMenuOpen
+          ? "rounded-t-[10px]"
+          : "rounded-[10px] lg:rounded-none lg:rounded-b-[10px]"
       } flex justify-around items-center py-[13px] ${
         isScrolled
           ? "bg-[#F6F5F3] shadow-lg"
           : "bg-[#F6F5F3] shadow-lg lg:shadow-none lg:bg-transparent"
       } border border-white lg:border-none`}
     >
-      <div className="flex items-end justify-center gap-2">
+      <div onClick={handleToTop} className="flex items-end justify-center gap-2">
         <HerreriaIcon
           className={`${
             isScrolled ? "fill-black" : "fill-black lg:fill-white"
@@ -66,19 +71,19 @@ export function Navbar() {
         </h2>
       </div>
       <ol className="hidden md:flex items-center gap-4 list-none">
-        <NavItem to="/" isScrolled={isScrolled}>
+        <NavItem to="about" isScrolled={isScrolled}>
           Sobre nosotros
         </NavItem>
-        <NavItem to="/servicios" isScrolled={isScrolled}>
+        <NavItem to="services" isScrolled={isScrolled}>
           Servicios
         </NavItem>
         {/*<NavItem to="/contacto" isScrolled={isScrolled}>Proyectos</NavItem>*/}
       </ol>
 
-      <button className="bg-[#111111] px-[20px] py-[5px] rounded-[5px] hover:bg-[#1a1a1a] hover:shadow-md transition-colors duration-300 hidden md:block">
+      <button onClick={() => handleSection('contact')} className="bg-[#111111] px-[20px] py-[5px] rounded-[5px] hover:bg-[#1a1a1a] hover:shadow-md transition-colors duration-300 hidden md:block">
         <Link
           className="text-white font-josefin font-medium text-[16px] leading-4"
-          to="/contact"
+          to="contact"
         >
           Contacto
         </Link>
@@ -102,10 +107,10 @@ export function Navbar() {
           <NavItem to="/" isScrolled={isScrolled}>
             Inicio
           </NavItem>
-          <NavItem to="/" isScrolled={isScrolled}>
+          <NavItem to="/about" isScrolled={isScrolled}>
             Sobre nosotros
           </NavItem>
-          <NavItem to="/servicios" isScrolled={isScrolled}>
+          <NavItem to="/services" isScrolled={isScrolled}>
             Servicios
           </NavItem>
           {/*<NavItem to="/contacto" isScrolled={isScrolled}>Proyectos</NavItem>*/}
@@ -113,7 +118,8 @@ export function Navbar() {
         <button className="bg-[#111111] px-[20px] py-[5px] rounded-[5px] hover:bg-[#1a1a1a] hover:shadow-md transition-colors duration-300">
           <Link
             className="text-white font-josefin font-medium text-[16px] leading-4"
-            to="/contact"
+            onClick={() => handleSection('contact')}
+            to="contact"
           >
             Contacto
           </Link>

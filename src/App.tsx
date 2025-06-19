@@ -13,9 +13,9 @@ export default function App() {
     <main className="bg-[#F8FAFC] min-h-screen">
         <Navbar />
         <Hero />
-        <AboutUs />
-        <OurServices />
-        <Contact />
+        <AboutUs id="about" />
+        <OurServices id="services" />
+        <Contact id="contact" />
         <Footer />
     </main>
   );
