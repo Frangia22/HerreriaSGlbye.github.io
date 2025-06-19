@@ -1,9 +1,9 @@
 import React from "react";
 import { OUR_SERVICES, OUR_WORK_PROCESS } from "../data/constants";
 
-export function OurServices() {
+export function OurServices({ id }: { id: string }) {
   return (
-    <section className="flex flex-col items-center justify-center gap-[20px] my-[40px]">
+    <section id={id} className="flex flex-col items-center justify-center gap-[20px] my-[40px]">
       <h2 className="font-josefin text-[32px] leading-[40px] text-[#1D1D1D] font-bold">
         Nuestros servicios
       </h2>
@@ -15,7 +15,7 @@ export function OurServices() {
         {OUR_SERVICES.items.map((item, index) => (
           <div
             key={index}
-            className="aspect-[16/9] flex flex-col md:flex-row justify-center items-center gap-[25px] p-[20px] bg-white border border-[#D8D8D8] rounded-[10px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] backdrop-blur-[2px]"
+            className="aspect-[16/9] flex flex-col md:flex-row justify-center items-center gap-[25px] p-[20px] bg-white/5 border border-[#D8D8D8] rounded-[10px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] backdrop-blur-[2px]"
           >
             {item.icon}
             <div className="flex flex-col justify-center items-center md:items-start gap-[5px] w-[calc(100%-76px)]">
@@ -41,7 +41,7 @@ export function OurServices() {
               className="relative flex-1 flex flex-col items-center"
             >
               <div className={`hidden md:block absolute w-full left-0 top-[60px] h-[4px] bg-[#0F203B] z-0 ${index === 0 ? "rounded-l-[10px]" : index === 3 ? "rounded-r-[10px]" : ""}`}></div>
-              <span className="flex items-center justify-center size-[45px] text-[18px] rounded-full bg-blue-600 z-10 text-white font-bold border-4 border-white shadow-lg">
+              <span className="flex items-center justify-center size-[45px] text-[18px] rounded-full bg-linear-[-108deg] from-[#0f203b] to-45% to-[#1c396d] z-10 text-[#F6F5F3] font-bold border-4 border-white shadow-lg">
                 {index + 1}
               </span>
               <div className="my-[10px] md:mt-[30px] text-center px-2 bg-white p-[20px] aspect-[3/1] md:aspect-auto md:p-0 md:bg-transparent rounded-[10px] shadow-sm border border-slate-100 md:border-none md:shadow-none">

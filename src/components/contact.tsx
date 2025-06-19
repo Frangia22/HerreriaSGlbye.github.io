@@ -2,9 +2,9 @@ import { CONTACT } from "../data/constants";
 import { HerreriaIcon } from "../assets/icons/icons";
 import React from "react";
 
-export function Contact() {
+export function Contact({ id }: { id: string }) {
   return (
-    <section className="flex flex-col items-center justify-center gap-[20px] py-[40px] bg-[#F6F5F3]">
+    <section id={id} className="flex flex-col items-center justify-center gap-[20px] py-[40px] bg-[#F6F5F3]">
       <h2 className="font-josefin text-[32px] leading-[40px] text-[#1D1D1D] font-bold">
         {CONTACT.title}
       </h2>

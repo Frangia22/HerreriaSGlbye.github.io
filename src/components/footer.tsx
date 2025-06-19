@@ -1,3 +1,4 @@
+import { handleSection, handleToTop } from "../utils/handleSection";
 import { FacebookIcon, HerreriaIcon, InstagramIcon, WhatsappIcon } from "../assets/icons/icons";
 import React from "react";
 import { Link } from "react-router";
@@ -6,7 +7,7 @@ export function Footer() {
   return (
     <footer className="w-full bg-[#0F203B]">
       <div className="flex flex-col md:flex-row items-center justify-around gap-[20px] md:gap-0 py-[20px] border-b border-[#F6F5F3]/70">
-        <div className="flex items-end justify-center gap-[25px]">
+        <div onClick={handleToTop} className="flex items-end justify-center gap-[25px]">
           <HerreriaIcon className="size-[40px] fill-[#F6F5F3]" />
           <Link to="/" className="font-josefin text-[24px] leading-[32px] font-semibold text-[#F6F5F3]">Herrería SG</Link>
         </div>
@@ -23,13 +24,13 @@ export function Footer() {
         </ul>
         <ul className="flex items-center gap-[20px] text-[#F6F5F3]/95 hover:text-[#F6F5F3] font-josefin text-[14px] leading-[20px] font-medium">
           <li>
-            <Link to="/">Sobre nosotros</Link>
+            <Link onClick={() => handleSection('about')} to="/">Sobre nosotros</Link>
           </li>
           <li>
-            <Link to="/">Servicios</Link>
+            <Link onClick={() => handleSection('services')} to="/">Servicios</Link>
           </li>
           <li>
-            <Link to="/">Contacto</Link>
+            <Link onClick={() => handleSection('contact')} to="/">Contacto</Link>
           </li>
         </ul>
       </div>

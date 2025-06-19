@@ -1,9 +1,9 @@
 import React from "react";
 import AboutUsImage from "../assets/flyer/about_us_image.png";
 import { ABOUT_US } from "../data/constants";
-export function AboutUs() {
+export function AboutUs({ id }: { id: string }) {
   return (
-    <section className="flex flex-col items-center justify-center gap-[20px] bg-[#F6F5F3] py-[40px]">
+    <section id={id} className="flex flex-col items-center justify-center gap-[20px] bg-[#F6F5F3] py-[40px]">
       <h2 className="font-josefin text-[32px] leading-[40px] text-[#1D1D1D] font-bold">
         {ABOUT_US.title}
       </h2>
