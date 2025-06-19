@@ -1,5 +1,4 @@
 import { CONTACT } from "../data/constants";
-import { HerreriaIcon } from "../assets/icons/icons";
 import React from "react";
 
 export function Contact({ id }: { id: string }) {
@@ -15,7 +14,7 @@ export function Contact({ id }: { id: string }) {
         {CONTACT.items.map((item, index) => (
           <article key={index} className="flex flex-col items-center justify-center gap-[5px] bg-[#CFE2FA] rounded-[10px] p-[20px] aspect-[2/.75] md:aspect-[16/10] w-full">
             <div className="flex items-center justify-center size-[48px] rounded-[10px] bg-[#DEEBFB] text-white">
-                <HerreriaIcon className="size-[32px] fill-[#0F203B]" />
+                {item.icon}
             </div>
             <h4 className="font-onest text-[20px] text-[#1D1D1D] font-semibold leading-[24px]">{item.title}</h4>
             <p className="font-onest text-[14px] text-[#1D1D1DD9] font-medium text-center w-[200px]">{item.description}</p>

@@ -1,4 +1,4 @@
-import { HerreriaIcon } from "../assets/icons/icons"
+import { GrillIcon, LadderIcon, LocationIcon, MobileHomeIcon, ScheduleIcon, ToolsIcon, TrailerIcon, WeldingIcon, WhatsappIcon } from "../assets/icons/icons"
 import React from "react"
 
 
@@ -24,32 +24,32 @@ export const OUR_SERVICES = {
         {
             title: "Trailers a medida",
             description: "Necesitas un trailer para una moto, auto o lancha, no dudes en consultarnos.",
-            icon: <HerreriaIcon className="size-[36px] fill-[#0F203B]"/>,
+            icon: <TrailerIcon className="size-[36px] fill-[#0F203B]"/>,
         },
         {
             title: "Reparación de casillas",
             description: "Reparación exterior e interior, instalación de agua y eléctrica.",
-            icon: <HerreriaIcon className="size-[36px] fill-[#0F203B]"/>,
+            icon: <MobileHomeIcon className="size-[36px] stroke-[#0F203B]"/>,
         },
         {
             title: "Escaleras y barandas",
             description: "Realizamos tu escalera a tu gusto y baranda.",
-            icon: <HerreriaIcon className="size-[36px] fill-[#0F203B]"/>,
+            icon: <LadderIcon className="size-[36px] stroke-[#0F203B]"/>,
         },
         {
             title: "Parillas",
             description: "Parrillas móviles, sistema de elevación de parrilla, brasero, palita, atizador, asador a la estaca y horno peruano.",
-            icon: <HerreriaIcon className="size-[36px] fill-[#0F203B]"/>,
+            icon: <GrillIcon className="size-[36px] fill-[#0F203B]"/>,
         },
         {
             title: "Reparación de carros",
             description: "Cambios de masa, eje, colocación de guardabarros, acondicionamiento en general.",
-            icon: <HerreriaIcon className="size-[36px] fill-[#0F203B]"/>,
+            icon: <ToolsIcon className="size-[36px] stroke-[#0F203B]"/>,
         },
         {
             title: "Rejas y portones",
             description: "Fabricación de rejas y portones residenciales e industriales.",
-            icon: <HerreriaIcon className="size-[36px] fill-[#0F203B]"/>,
+            icon: <WeldingIcon className="size-[36px] fill-[#0F203B]"/>,
         }
     ]
 }
@@ -81,14 +81,17 @@ export const CONTACT = {
     subtitle: "¿Tienes un proyecto en mente? Contáctanos y le ayudamos a hacerlo realidad",
     items: [
         {
+            icon: <LocationIcon className="size-[32px] fill-[#0F203B]" />,
             title: "Dirección",
             description: "Colon 77, Laboulaye, Córdoba",
         },
         {
+            icon: <ScheduleIcon className="size-[32px] fill-[#0F203B]" />,
             title: "Horario",
             description: "Lun-Vie: 8:00 - 18:00",
         },
         {
+            icon: <WhatsappIcon className="size-[32px] fill-[#0F203B]" />,
             title: "Celular",
             description: "+543385401988",
         }
