@@ -58,7 +58,7 @@ export function OurServices({ id }: { id: string }) {
         y: 50,
         opacity: 0.2,
         ease: "power3.out",
-      })
+      });
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
@@ -70,24 +70,21 @@ export function OurServices({ id }: { id: string }) {
         trigger: sectionWorkProcessRef.current,
         start: "top bottom",
         end: "bottom 60%",
-        toggleActions: "play pause reverse reverse",
+        toggleActions: "play pause pause reverse",
       },
     });
-    timeline.from(
-      stepsRef.current?.children || [],
-      {
-        duration: 0.5,
-        y: 50,
-        opacity: 0,
-        stagger: 0.2,
-        ease: "power3.out",
-      }
-    );
+    timeline.from(stepsRef.current?.children || [], {
+      duration: 0.3,
+      y: 50,
+      opacity: 0,
+      stagger: 0.2,
+      ease: "power3.out",
+    });
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  })
+  });
   return (
     <section
       ref={sectionRef}
