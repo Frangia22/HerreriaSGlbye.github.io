@@ -21,7 +21,7 @@ export function OurServices({ id }: { id: string }) {
         trigger: sectionRef.current,
         start: "top center",
         end: "bottom 20%",
-        toggleActions: "play pause reverse reverse",
+        toggleActions: "play pause none reverse",
       },
     });
 
