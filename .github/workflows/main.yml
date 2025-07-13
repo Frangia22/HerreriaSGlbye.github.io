@@ -1,0 +1,31 @@
+name: Deploy to App React in server DonWeb
+
+on:
+  push:
+    branches: ["refactor-landing-2025"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔍 Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 🔧 Setup Node.js
+        uses: actions/setup-node@v4.0.4
+
+      - name: 🛠️Install dependencies
+        run: npm install
+
+      - name: 🚧 Build the app
+        run: npm run build
+
+      - name: 🚀 Deploy the app via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /herreriasglbye.com.ar/
+          local-dir: dist/
